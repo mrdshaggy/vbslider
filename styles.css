@@ -1,0 +1,90 @@
+body {
+  background: #eeddae;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.slider-container {
+  overflow: hidden;
+  max-width: 90%;
+  box-sizing: border-box;
+  margin: 20px auto 0;
+  position: relative;
+}
+.slider-container button {
+  display: block;
+  position: absolute;
+  width: 70px;
+  top: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.slider-container button:before {
+  content: '';
+  position: absolute;
+  font-size: 50px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #ffffff;
+  opacity: 0.5;
+}
+.slider-container button:hover:before {
+  opacity: 1;
+}
+.slider-container button:focus {
+  outline: none !important;
+}
+.slider-container button#prev {
+  left: 0;
+  padding-left: 15px;
+}
+.slider-container button#prev:before {
+  content: '<';
+}
+.slider-container button#prev:hover {
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.45) 0%, transparent 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.45) 0%, transparent 100%);
+}
+.slider-container button#next {
+  right: 0;
+  padding-right: 15px;
+}
+.slider-container button#next:before {
+  content: '>';
+}
+.slider-container button#next:hover {
+  background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.45) 0%, transparent 100%);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.45) 0%, transparent 100%);
+}
+
+#vbslider {
+  position: relative;
+  width: auto;
+  left: 0;
+  -webkit-transition: -webkit-transform 0.5s;
+          transition: transform 0.5s;
+}
+#vbslider > div {
+  display: block;
+  float: left;
+  position: relative;
+}
+#vbslider > div img {
+  width: 100%;
+}
+#vbslider > div p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 32px;
+  color: #fff;
+  margin: 0;
+}
